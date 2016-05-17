@@ -15,10 +15,7 @@ jQuery(function($) {
 			easing: 'easeOutCubic'
 		});
 	}
-
-
-       
-          
+  
 	var L = {
 		googleMap: function() {
 
@@ -82,6 +79,8 @@ jQuery(function($) {
 		goTo: function() {
 			$('.js-goto').on('click', function(e) {
 				e.preventDefault();
+				$('.c-nav-primary').find('.is-active').removeClass('is-active');
+				$(this).parent().addClass('is-active');
 				var t = $(this).attr('href');
 				goToTarget(t);
 			});
