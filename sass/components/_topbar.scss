@@ -1,0 +1,12 @@
+.c-topbar {
+	position: fixed; z-index: 20;
+	left: 0; top: 0;
+	width: 100%;
+	height: 80px;
+	background-color: white;
+	border-bottom: 1px solid rgba(black, .1);
+	
+	.o-wrap {
+		height: 100%;
+	}
+}

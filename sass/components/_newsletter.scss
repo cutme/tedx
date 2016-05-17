@@ -1,0 +1,11 @@
+.c-newsletter {
+	.o-field {
+		float: left;
+		width: 330px;
+		margin-right: 25px;
+	}
+	
+	@include input-placeholder {
+		font-weight: $thin;
+	}
+}

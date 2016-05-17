@@ -1,0 +1,23 @@
+.c-contact {
+	@include opacity(.8);
+	float: left;
+	margin-bottom: 40px;
+
+	li {
+		float: left;
+		width: 220px;
+		padding-right: 30px;
+		
+		p {
+			line-height: 1.8;
+			font-weight: $thin;
+		}
+		
+	}
+	
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

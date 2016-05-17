@@ -1,0 +1,18 @@
+.c-bottom {
+	border-top: 1px solid #454444;
+	padding: {
+		top: 35px;
+		bottom: 35px;
+	}
+
+	&__copyright {
+		@include opacity(.3);
+		float: left;
+		
+		p {
+			float: left;
+			margin-right: 40px;
+			font-weight: $thin;
+		}
+	}
+}

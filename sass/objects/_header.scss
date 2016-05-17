@@ -1,0 +1,21 @@
+.o-header {
+	margin-bottom: 50px;
+	font-weight: $bold;
+	line-height: 1.2;
+	
+	.c-about &,
+	.c-map & {
+		margin-bottom: 25px;
+	}
+	
+	&__lead {
+		font: {
+			size: em(45);
+		}
+		color: black;
+	}
+	
+	&__sublead {
+		font-size: em(30);
+	}
+}

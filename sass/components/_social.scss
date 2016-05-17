@@ -1,0 +1,21 @@
+.c-social {
+	float: right;
+	
+	li {
+		float: left;
+		margin-right: 10px;
+		
+		&:last-child {
+			margin: 0;
+		}
+
+		a {
+			@include opacity(.6);
+			font-size: 30px;
+			
+			&:hover {
+				@include opacity(1);
+			}
+		}
+	}
+}

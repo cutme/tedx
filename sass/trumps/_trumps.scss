@@ -1,0 +1,82 @@
+[class^="icon-"], [class*=" icon-"] {
+	@include icomoon;
+}
+
+.u-aa {
+	@include antialias;
+}
+
+.u-align-center {
+	text-align: center;
+}
+
+.u-posxy {
+	@include scut-center-transform;
+}
+
+.u-posx {
+	@include scut-center-transform(x);
+}
+
+.u-posy {
+	@include scut-center-transform(y);
+}
+
+.u-push {
+	@include transition-duration(60ms);
+
+	&:active {
+		@include transform(scale(1.04));
+	}
+}
+
+.u-push-right {
+	float: right;
+}
+
+.u-symbol:before,
+body:before {
+	@include icomoon;
+	position: absolute;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 700px;
+	color: $red;
+	content: "\e902";
+}
+
+.u-symbol {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	&:before {
+		right: -440px; bottom: 80px;
+	}
+}
+
+body {
+	&:before {
+		
+		left: -440px; top: -70px;
+		
+	}
+}
+
+
+.safari {
+	* {
+		-webkit-backface-visibility: hidden;
+		-webkit-transform-style: preserve-3d;
+	}
+}
+
+
+
+
+
+.u-color-red {
+	color: $red;
+}

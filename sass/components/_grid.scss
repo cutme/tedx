@@ -1,0 +1,73 @@
+.c-grid {
+	position: relative;
+	z-index: 10;
+	color: white;
+	
+	i {
+		position: absolute;
+		left: 25px; top: 25px;
+		font-size: em(40);
+		z-index: 15;
+	}
+	
+	&__apla {
+		@include hover;
+		@include opacity(0);
+		position: absolute; 
+		left: 0; top: 0;
+		z-index: 10;
+		width: 100%; height: 100%;
+		background-color: rgba($red, .9);		
+		
+		&--red {
+			
+		}
+		
+		&--gray {
+			background-color: rgba($gray--darker, .9);
+		}
+		
+		&--visible {
+			@include opacity(1);
+		}
+	}
+	
+	&__text {
+		font-weight: $thin;
+	}
+
+	&__item {
+		float: left;
+		position: relative;
+		height: 280px;
+		background-color: $gray--darker;
+
+		&--short {
+			width: 280px;
+			
+			.c-grid__text {
+				padding: {
+					left: 40px;
+					right: 40px;
+				}
+			}
+		}
+		
+		&--wide {
+			width: 560px;
+			
+			.c-grid__text {
+				padding: {
+					left: 90px;
+					right: 90px;
+				}
+			}
+		}
+		
+		&:hover {
+			.c-grid__apla {
+				@include opacity(1);
+			}
+		}
+	}
+}

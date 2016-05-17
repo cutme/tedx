@@ -1,0 +1,35 @@
+.o-btn {
+	@include antialias;
+	@include border-radius( 50px );
+	position: relative;
+	display: inline-block;
+	height: 50px;
+	padding: 0 60px;
+	line-height: 48px;
+	font: {
+		weight: $bold;
+		size: em(16);
+	}
+	
+	&--filled {
+		background-color: $red;
+		
+		color: white;
+		
+		&:hover {
+			background-color: darken($red, 10%);
+		}
+	}
+	
+	&--outline {
+		border: 3px solid black;
+		padding: 0 60px;
+		line-height: 43px;
+		color: black;
+		
+		&:hover {
+			background-color: black;
+			color: white;
+		}
+	}
+}

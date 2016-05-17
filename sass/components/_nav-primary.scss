@@ -1,0 +1,28 @@
+.c-nav-primary {
+	right: 0;
+	
+	&__btn,
+	&__item {
+		display: inline-block;
+		margin: 0 12px;
+		vertical-align: middle;
+	}
+	
+	&__btn {
+		margin-right: 0;
+	}
+	
+	&__item {
+		a {
+			color: rgba(black, .4);
+			
+			&:hover {
+				color: rgba(black, .6);
+			}
+		}
+
+		&.is-active {
+			color: black;
+		}
+	}
+}
