@@ -262,7 +262,6 @@ jQuery(function($) {
 		partners: function() {
 			var owl = $('.owl-carousel'),
 				status;
-				
 
 			function startOwl() {
 				owl.owlCarousel({
@@ -270,6 +269,10 @@ jQuery(function($) {
 					loop: true,
 					nav: false,
 					items: 4,
+					owl2row: 'true', // enable plugin
+		            owl2rowTarget: 'o-thumbs__item',    // class for items in carousel div
+		            owl2rowContainer: 'owl2row-item', // class for items container
+		            owl2rowDirection: 'utd', // ltr : directions
 					responsive: {
 						0: {
 							items: 2
