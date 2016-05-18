@@ -18,4 +18,18 @@
 			}
 		}
 	}
+	
+	.c-nav-submenu & {
+		float: none;
+		padding: 10px 0;
+		
+		li {
+			float: none;
+			display: inline-block;
+			
+			a {
+				font-size: 34px;
+			}
+		}
+	}
 }

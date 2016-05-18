@@ -1,23 +1,87 @@
 .c-contact {
 	@include opacity(.8);
 	float: left;
+	width: grid(880);
 	margin-bottom: 40px;
 
 	li {
-		float: left;
-		width: 220px;
+		position: relative;
 		padding-right: 30px;
+		
+		&:last-child {
+			padding-right: 0;
+		}
 		
 		p {
 			line-height: 1.8;
 			font-weight: $thin;
 		}
 		
+		@media screen and ( min-width: 671px ) {
+			float: left;
+			width: grid(220, 880);
+		}
+		
+		@media screen and ( max-width: 670px ) {
+			padding: 15px 0;
+			border-bottom: 1px solid rgba(white, .2);
+			
+			p {
+				font-size: 14px;
+
+				&:not(:first-of-type) {
+					display: none;
+				}
+				
+				strong {
+					font-weight: $thin;
+				}
+			}
+			
+			&:after {
+				@include icomoon;
+				@include opacity(.3);
+				position: absolute;
+				right: 0; top: 18px;
+				display: block;
+				width: 19px; height: 19px;
+				font-size: 19px;
+				content: "\e910";
+			}
+		}
+		
+		&.is-open {
+			p {
+				display: block;
+			}
+			
+			p, strong {
+				font-weight: $regular;
+			}
+			
+			p {
+				&:first-of-type {
+					margin-bottom: 10px;
+				}
+			}
+			
+			&:after {
+				content: "\e90f";
+			}
+		}
 	}
 	
 	a {
 		&:hover {
 			text-decoration: underline;
+		}
+	}
+	
+	@media screen and ( max-width: 670px ) {
+		width: 100%;
+		
+		li {
+			cursor: pointer;
 		}
 	}
 }

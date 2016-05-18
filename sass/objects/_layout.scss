@@ -1,3 +1,7 @@
 .o-layout {
 	margin-bottom: 100px;
+	
+	@media screen and ( max-width: 700px ) {
+		margin-bottom: 50px;
+	}
 }

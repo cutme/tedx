@@ -10,6 +10,14 @@
 	text-align: center;
 }
 
+.u-mobile {
+	&--only {
+		@media screen and ( min-width: 1024px ) {
+			display: none;
+		}
+	}
+}
+
 .u-posxy {
 	@include scut-center-transform;
 }
@@ -45,6 +53,11 @@ body:before {
 	font-size: 700px;
 	color: $red;
 	content: "\e902";
+	
+	@media screen and ( max-width: 900px ) {
+		font-size: 78vw;
+	}
+	
 }
 
 .u-symbol {
@@ -74,7 +87,22 @@ body {
 }
 
 
+.owl-carousel .owl-dots {
+	width: 100%;
+	text-align: center;
+}
 
+.owl-carousel .owl-dot {
+	@include  border-radius(50%);
+	display: inline-block;
+	width: 6px; height: 6px;
+	background-color: #ccc;
+	margin: 0 4px;
+	
+	&.active {
+		background-color: $red;
+	}
+}
 
 
 .u-color-red {

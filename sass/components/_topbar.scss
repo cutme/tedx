@@ -9,4 +9,8 @@
 	.o-wrap {
 		height: 100%;
 	}
+	
+	@media screen and ( max-width: 670px ) {
+		height: 70px;
+	}
 }

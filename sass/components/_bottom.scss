@@ -13,6 +13,21 @@
 			float: left;
 			margin-right: 40px;
 			font-weight: $thin;
+		}		
+	}
+	
+	@media screen and ( max-width: 670px ) {
+		border-top: none;
+		padding-top: 0;
+
+		&__copyright {
+			float: none;
+
+			p {
+				float: none;
+				margin: 0;
+				text-align: center;
+			}
 		}
 	}
 }

@@ -4,4 +4,20 @@
 	.o-wrap {
 		height: 100%;
 	}
+	
+	@media screen and ( max-width: 900px ) {
+		height: 450px;
+		
+		.o-media {
+			margin-top: 20px;
+		}
+	}
+	
+	@media screen and ( max-width: 425px ) {
+		height: 300px;
+		
+		.o-media {
+			width: grid(300, 425);
+		}
+	}
 }

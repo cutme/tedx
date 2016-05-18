@@ -15,4 +15,8 @@
 			color: $red;
 		}
 	}
+	
+	@media screen and ( max-width: 670px ) {
+		display: none;
+	}
 }

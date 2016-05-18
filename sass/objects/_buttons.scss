@@ -1,6 +1,7 @@
 .o-btn {
 	@include antialias;
 	@include border-radius( 50px );
+	@include hover;
 	position: relative;
 	display: inline-block;
 	height: 50px;
@@ -17,11 +18,12 @@
 		color: white;
 		
 		&:hover {
-			background-color: darken($red, 10%);
+			background-color: $red--darker
 		}
 	}
 	
 	&--outline {
+		background-color: white;
 		border: 3px solid black;
 		padding: 0 60px;
 		line-height: 43px;
@@ -31,5 +33,10 @@
 			background-color: black;
 			color: white;
 		}
+	}
+	
+	@media screen and ( max-width: 768px ) {
+		padding: 0 40px;
+		font-size: em(14);
 	}
 }

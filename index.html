@@ -3,9 +3,10 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="robots" content="noindex, nofollow">
 	<title>TEDx Wrocław</title>
-	<link rel="stylesheet" href="style/main.css" >
+	<link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
@@ -19,31 +20,56 @@
 			<nav class="c-nav-primary u-posy">
 				<ul>
 					<li class="c-nav-primary__item">
-						<a href="#about" class="js-goto">About Event</a>
+						<a href="#about" class="js-goto">
+							<span class="c-nav-primary__title">About Event</span>
+							<i class="icon-symbol"></i>
+						</a>
 					</li>
-					
+
 					<li class="c-nav-primary__item">
-						<a href="#speakers" class="js-goto">Speakers</a>
+						<a href="#speakers" class="js-goto">
+							<span class="c-nav-primary__title">Speakers</span>
+							<i class="icon-voice-recorder"></i>
+						</a>
 					</li>
-					
+
 					<li class="c-nav-primary__item">
-						<a href="#">Program</a>
+						<a href="#program">
+							<span class="c-nav-primary__title">Program</span>
+							<i class="icon-clock"></i>
+						</a>
 					</li>
-					
+
 					<li class="c-nav-primary__item">
-						<a href="#partners" class="js-goto">Partners</a>
+						<a href="#partners" class="js-goto">
+							<span class="c-nav-primary__title">Partners</span>
+							<i class="icon-partners"></i>
+						</a>
 					</li>
-					
-					<li class="c-nav-primary__item">
-						<a href="#social" class="js-goto">Social</a>
+
+					<li class="c-nav-primary__item c-nav-primary__item--mobile js-opensubmenu">
+						<a href="#more">
+							<i class="icon-more"></i>
+						</a>
 					</li>
-					
-					<li class="c-nav-primary__item">
+
+					<li class="c-nav-primary__item c-nav-primary__item--hide">
+						<a href="#social" class="js-goto">
+							<span class="c-nav-primary__title">Social</span>
+							<i class=""></i>
+						</a>
+					</li>
+
+					<li class="c-nav-primary__item c-nav-primary__item--submenu">
 						<a href="#contact" class="js-goto">Contact</a>
 					</li>
-					
-					<li class="c-nav-primary__item">
+
+					<li class="c-nav-primary__item c-nav-primary__item--submenu">
 						<a href="#">FAQ</a>
+					</li>
+
+					<li class="c-nav-primary__item c-nav-primary__item--mobile c-nav-primary__item--submenu">
+						<a href="#">Want to break the silence?</a>
 					</li>
 					
 					<li class="c-nav-primary__btn">
@@ -51,16 +77,18 @@
 					</li>
 				</ul>
 			</nav>
+			
+			
 		</div>
 	</div>
 	
 	
-	<div class="o-wrap c-header">
+	<div class="o-wrap c-header" id="about">
 		<img src="img/logo-break.png" alt="break the silence TEDx Wroclaw" class="o-media c-logo-break" />
 	</div>
 	
 	
-	<div class="o-wrap c-about" id="about">		
+	<div class="o-wrap c-about" >		
 		<div class="c-about__text">
 			<div class="o-header">
 				<h2 class="o-header__lead">About event</h2>
@@ -186,6 +214,8 @@ This is a local initiative which allignes with the spirit of our town, the Meeti
 			<li class="o-thumbs__item o-thumbs__item--empty">
 				<figure class="o-thumbs__photo">
 					<i class="icon-symbol u-posxy"></i>
+					
+					<img src="img/speaker--placeholder.png" alt="" class="o-media" />
 				</figure>
 
 				<p class="o-thumbs__name">To be Announced</p>
@@ -199,8 +229,8 @@ This is a local initiative which allignes with the spirit of our town, the Meeti
 		<div class="o-header">
 			<h2 class="o-header__lead">Partners</h2>
 		</div>
-		
-		<ul class="o-thumbs__content">
+
+		<ul class="o-thumbs__content owl-carousel">
 			<li class="o-thumbs__item">
 				<figure class="o-thumbs__photo">
 					<figcaption>						
@@ -213,7 +243,7 @@ There is no question that nawadays we buy to much. Satisfaction is a sum of smal
 						</p>
 					</figcaption>
 
-					<img src="assets/partner-ikona.png" alt="" />
+					<img src="assets/partner-ikona.png" alt="" class="o-media" />
 				</figure>
 			</li>
 			
@@ -229,7 +259,7 @@ There is no question that nawadays we buy to much. Satisfaction is a sum of smal
 						</p>
 					</figcaption>
 
-					<img src="assets/partner-ikona.png" alt="" />
+					<img src="assets/partner-ikona.png" alt="" class="o-media" />
 				</figure>
 			</li>
 			
@@ -245,7 +275,7 @@ There is no question that nawadays we buy to much. Satisfaction is a sum of smal
 						</p>
 					</figcaption>
 
-					<img src="assets/partner-ikona.png" alt="" />
+					<img src="assets/partner-ikona.png" alt="" class="o-media" />
 				</figure>
 			</li>
 			
@@ -261,7 +291,7 @@ There is no question that nawadays we buy to much. Satisfaction is a sum of smal
 						</p>
 					</figcaption>
 
-					<img src="assets/partner-ikona.png" alt="" />
+					<img src="assets/partner-ikona.png" alt="" class="o-media" />
 				</figure>
 			</li>
 			
@@ -277,7 +307,7 @@ There is no question that nawadays we buy to much. Satisfaction is a sum of smal
 						</p>
 					</figcaption>
 
-					<img src="assets/partner-ikona.png" alt="" />
+					<img src="assets/partner-ikona.png" alt="" class="o-media" />
 				</figure>
 			</li>
 			
@@ -293,7 +323,7 @@ There is no question that nawadays we buy to much. Satisfaction is a sum of smal
 						</p>
 					</figcaption>
 
-					<img src="assets/partner-ikona.png" alt="" />
+					<img src="assets/partner-ikona.png" alt="" class="o-media" />
 				</figure>
 			</li>
 			
@@ -309,7 +339,7 @@ There is no question that nawadays we buy to much. Satisfaction is a sum of smal
 						</p>
 					</figcaption>
 
-					<img src="assets/partner-ikona.png" alt="" />
+					<img src="assets/partner-ikona.png" alt="" class="o-media" />
 				</figure>
 			</li>
 			
@@ -325,7 +355,7 @@ There is no question that nawadays we buy to much. Satisfaction is a sum of smal
 						</p>
 					</figcaption>
 
-					<img src="assets/partner-ikona.png" alt="" />
+					<img src="assets/partner-ikona.png" alt="" class="o-media" />
 				</figure>
 			</li>
 			
@@ -402,13 +432,18 @@ Designer Tom Uglow is creating a future in which humanity's love for natural sol
 					to know?
 				</h3>
 			</div>
-			
+
 			<form action="#" class="o-form">
-				<div class="o-field">
+				<div class="o-field is-error">
 					<input type="email" placeholder="Your e-mail address" />
+					
+					<p class="o-form__message o-form__message--error">
+						Oops! Looks like you mised the @.<br />
+						Why don’t you try again?
+					</p>
 				</div>
 				
-				<div class="o-field">
+				<div class="o-field o-field--submit">
 					<button type="submit" class="o-btn o-btn--outline u-push">Send</button>
 				</div>
 			</form>
@@ -524,7 +559,7 @@ Designer Tom Uglow is creating a future in which humanity's love for natural sol
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" data-headjs-load="js/init.js"></script>
 
-<script type="text/javascript">WebFontConfig={google:{families:['Lato:100,400,700, 900:latin']}};(function(){var wf=document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>
+<script type="text/javascript">WebFontConfig={google:{families:['Lato:100,300,400,700, 900:latin, latin-ext']}};(function(){var wf=document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>
 
 </body>
 </html>

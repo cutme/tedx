@@ -1,9 +1,17 @@
 .o-wrap {
 	@include clear;
-	position: relative;
+	position: relative; z-index: 5;
 	max-width: $grid-base-width+px;
 	margin: {
 		left: auto;
 		right: auto;
+	}
+	
+	
+	@media screen and ( max-width: $grid-base-width+px ) {
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
 	}
 }

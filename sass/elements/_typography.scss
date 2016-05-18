@@ -15,6 +15,12 @@ a {
 	cursor: pointer;
 }
 
+br {
+	@media screen and ( max-width: 700px ) {
+		display: none;
+	}
+}
+
 strong {
 	font-weight: $bold;
 }

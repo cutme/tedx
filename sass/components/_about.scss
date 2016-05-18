@@ -9,53 +9,117 @@
 		font-size: em(24);
 		text-align: right;
 	}
+	
+	&__play {
+		@include border-radius( 50% );
+		@include hover;
+		@include scut-center-transform;
+		z-index: 10;
+		display: block;
+		width: 100px; height: 100px;
+		border: 10px solid white;
+		padding: 18px 0 0 24px;
+		
+		&:after {
+			@include hover;
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 22.5px 0 22.5px 40px;
+			border-color: transparent transparent transparent white;
+			content: ' ';
+		}
+	}
 
 	&__text {
 		float: left;
-		width: 380px;
+		width: grid(380);
 		padding-top: 140px;
 		color: $gray;
-		
+
 		p {
 			margin-bottom: 1.5em;
 			font-weight: $thin;
-		}
+		}	
 	}
-	
+
 	&__thumb {
 		position: relative;
 		display: block;
 		
-		i {
-			@include border-radius( 50% );
-			@include scut-center-transform;
-			z-index: 10;
-			display: block;
-			width: 100px; height: 100px;
-			border: 10px solid white;
-			padding: 18px 0 0 24px;
-			
-			&:after {
-				display: block;
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 22.5px 0 22.5px 40px;
-				border-color: transparent transparent transparent white;
-				content: ' ';
-			}
+		.o-media {
+			width: 100%;
 		}
 		
 		&:hover {
-			.o-media {
-				@include hover;
-				@include opacity(.8);
+			.c-about__play {
+				border-color: $red;
+				
+				&:after {
+					border-color: transparent transparent transparent $red;
+				}
 			}
 		}
 	}
 	
 	&__video {
 		float: right;
-		width: 564px;
+		width: grid(564);
+	}
+	
+	@media screen and ( max-width: $tablet+px ) {
+		&__text,
+		&__video {
+			float: none;
+			width: auto;
+		}
+		
+		&__thumb {
+			margin: 0 auto;
+		}
+		
+		&__lead {
+			background-color: #f7f7f7;
+			margin: 0 0 40px 0;
+			padding: 10px 0;
+			text-align: center;
+			font-size: em(20);
+			padding-right: 58px;
+			
+			p {
+				position: relative;
+
+				&:first-of-type {
+					margin-bottom: -10px;
+					margin-right: -58px;
+					margin-top: -20px;
+
+					&:after {
+						@include border-radius( 50% );
+						@include  box-shadow( rgba(black, .2) 0 0 10px );
+						@include icomoon;
+						position: relative;
+						right: -50px; bottom: -20px;
+						display: inline-block;
+						width: 58px; height: 58px;
+						background-color: $red;
+						font-size: 40px;
+						color: white;
+						line-height: 58px;
+						content: "\e90d";
+					}
+				}
+			}			
+		}
+	}
+	
+	@media screen and ( max-width: 700px ) {
+		top: 0;
+		margin-bottom: 50px;
+		
+		&__text {
+			padding-top: 0;
+		}
 	}
 }

@@ -20,6 +20,15 @@ input, textarea {
 	}
 	cursor: text;
 	color: inherit;
+	
+	.is-error & {
+		color: $red !important;
+	}
+}
+
+
+@include input-placeholder {
+	color: inherit;
 }
 
 textarea {

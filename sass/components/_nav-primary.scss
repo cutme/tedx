@@ -1,6 +1,22 @@
 .c-nav-primary {
 	right: 0;
+
+	[class^="icon-"] {
+		font-size: 30px;
+	}
 	
+	.icon-partners {
+		font-size: 44px;
+	}
+	
+	.icon-clock {
+		font-size: 36px;
+	}
+
+	.icon-voice-recorder {
+		font-size: 36px;
+	}
+
 	&__btn,
 	&__item {
 		display: inline-block;
@@ -11,20 +27,82 @@
 	&__btn {
 		margin-right: 0;
 	}
-	
+
 	&__item {
 		a {
 			color: rgba(black, .4);
-			
+
 			&:hover {
 				color: rgba(black, .6);
+			}
+
+			@media screen and ( max-width: 1023px ) {
+				color: rgba(black, .2);
 			}
 		}
 
 		&.is-active {
 			a {
-				color: black;
+				color: $red;
 			}
+		}
+	}
+
+	@media screen and ( min-width: 1024px ) {
+		[class^="icon-"] {
+			display: none;
+		}
+		
+		&__item {
+			&--mobile {
+				display: none;	
+			}
+		}
+	}
+	
+	@media screen and ( max-width: $grid-base-width+px ) {
+		right: 20px;
+	}
+	
+	@media screen and ( max-width: 1023px ) {
+		width: 100%;
+		padding-left: 0px;
+		text-align: center;
+		
+		ul {
+			padding-left: 40px;
+		}
+		
+		&__item {
+			&--hide {
+				display: none;
+			}
+			
+			&--submenu {
+				display: none;
+			}
+		}
+
+		&__title {
+			display: none;
+		}
+		
+		&__btn {
+			@include scut-center-transform(y);
+			right: 0;
+		}	
+	}
+	
+	@media screen and ( max-width: 670px ) {
+		
+		&__btn {
+			display: none;
+		}
+	}
+	
+	@media screen and ( max-width: 425px ) {		
+		&__item {
+			margin: 0 6px;
 		}
 	}
 }

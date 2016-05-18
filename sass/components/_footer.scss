@@ -3,5 +3,19 @@
 	padding-top: 90px;
 	font-size: em(12);
 	color: white;
+	
+	.o-wrap {
+		@media screen and ( max-width: $tablet+px ) {
+			max-width: 100%;
+		}
+	}
+	
+	@media screen and ( max-width: 700px ) {
+		padding-top: 45px;
+	}
+	
+	@media screen and ( max-width: 580px ) {
+		font-size: em(14);
+	}
 }
 
