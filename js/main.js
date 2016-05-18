@@ -14,7 +14,7 @@ jQuery(function($) {
 	}
 
 	function exist(o) {
-		d = ($(o).length > 0) ? true : false;
+		var d = ($(o).length > 0) ? true : false;
 		return d;
 	}
 
@@ -44,7 +44,7 @@ jQuery(function($) {
 				open = 'is-open';
 			l.on('click', function() {
 				if ($(window).width() <= 670) {
-					_t = $(this);
+					var _t = $(this);
 					if ($(this).hasClass(open)) {
 						_t.removeClass(open);
 					} else {
@@ -249,7 +249,7 @@ jQuery(function($) {
 				e.preventDefault();
 				$(this).toggleClass('is-active');
 				s.toggleClass('is-visible');
-			})
+			});
 		},
 		init: function() {
 			N.navControl();
@@ -257,7 +257,7 @@ jQuery(function($) {
 			exist('.c-map') && L.googleMap();
 			exist('.js-goto') && N.goTo();
 		}
-	}
+	};
 	var S = {
 		partners: function() {
 			var owl = $('.owl-carousel'),
@@ -270,9 +270,9 @@ jQuery(function($) {
 					nav: false,
 					items: 4,
 					owl2row: 'true', // enable plugin
-		            owl2rowTarget: 'o-thumbs__item',    // class for items in carousel div
-		            owl2rowContainer: 'owl2row-item', // class for items container
-		            owl2rowDirection: 'utd', // ltr : directions
+					owl2rowTarget: 'o-thumbs__item',    // class for items in carousel div
+					owl2rowContainer: 'owl2row-item', // class for items container
+					owl2rowDirection: 'utd', // ltr : directions
 					responsive: {
 						0: {
 							items: 2
@@ -280,7 +280,7 @@ jQuery(function($) {
 						480: {
 							items: 4
 						}
-					},
+					}
 				});
 			}
 
@@ -314,7 +314,7 @@ jQuery(function($) {
 				status = false;
 			}
 		}
-	}
+	};
 	$(document).ready(function() {
 		L.init();
 		N.init();
