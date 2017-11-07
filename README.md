@@ -1,2 +1,2 @@
 # TEDx Wrocław
-Live: [storyfactory.pl](http://storyfactory.pl)
+Live: [github.io/tedx] (http://cutme.github.io/tedx/)
